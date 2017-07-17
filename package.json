@@ -1,0 +1,43 @@
+{
+  "name": "simple-subject",
+  "version": "0.2.0",
+  "description": "A class which notifies subscribers of events",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^8.0.13",
+    "mocha": "^3.4.2",
+    "tslint": "^5.5.0",
+    "typescript": "^2.4.1"
+  },
+  "scripts": {
+    "build": "npm run build-source && npm run build-index",
+    "build-index": "tsc --declaration index.ts",
+    "build-source": "rm -rf lib/*.* && tsc",
+    "test": "npm run build && mocha lib/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jabney/simple-subject.git"
+  },
+  "keywords": [
+    "event",
+    "notify",
+    "observable",
+    "observer",
+    "simple",
+    "subject",
+    "subscriber"
+  ],
+  "author": "James Abney",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jabney/simple-subject/issues"
+  },
+  "homepage": "https://github.com/jabney/simple-subject#readme"
+}
