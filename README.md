@@ -9,7 +9,7 @@ A simple, no-frills subject-observer implementation written in TypeScript.
 
 ### Installation
 ```bash
-> npm install simple-subject-observer
+> npm install simple-subject
 ```
 
 ### From source
@@ -26,7 +26,7 @@ A simple, no-frills subject-observer implementation written in TypeScript.
 ### Usage
 ```javascript
 // Import the class
-const SimpleSubject = require('simple-subject-observer')
+const SimpleSubject = require('simple-subject')
 
 // Create an instance
 const subject = new SimpleSubject()
@@ -67,11 +67,11 @@ subscriber 2: {message: "notified"}
 If your `tsconfig.json` is set up to use commonjs modules, e.g., `"module": "commonjs"`, you can use `require`:
 
 ```javascript
-import SimpleSubject = require('simple-subject-observer')
+import SimpleSubject = require('simple-subject')
 ```
 
 However this doesn't work when using ES2015 modules, e.g., `"module": "es2015"`. In this case, use the TypeScript source:
 
 ```javascript
-import { SimpleSubject } from 'simple-subject-observer/src'
+import { SimpleSubject } from 'simple-subject/src'
 ```
