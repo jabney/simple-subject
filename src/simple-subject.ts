@@ -64,7 +64,7 @@ export class SimpleSubject {
 
 /**
  * Helper for notifyAsync setTimeout calls
- * @function
+ * @function executeCallbackFn
  * @param {TNotifyCallback} callback
  * @param {*} payload
  * @param {number} id
