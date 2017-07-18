@@ -3,6 +3,7 @@
 
 A simple, no-frills subject-observer implementation written in TypeScript.
 
+- [Demo App](https://jabney.github.io/simple-subject-demo)
 - [Repository](https://github.com/jabney/simple-subject)
 - [Implementation](https://github.com/jabney/simple-subject/tree/master/src)
 - [Examples](https://github.com/jabney/simple-subject/tree/master/examples)
