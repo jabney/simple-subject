@@ -85,11 +85,7 @@ const subject:SimpleSubject = new SimpleSubject()
 `SimpleSubject` supports generic notation for specifying the type of the data payload.
 
 ```javascript
-import {
-  SimpleSubject,
-  ISubscriptionToken,
-  TNotifyCallback
-} from 'simple-subject/src'
+import { SimpleSubject, ISubscriptionToken } from 'simple-subject/src'
 
 interface IMessage {
   from: string
