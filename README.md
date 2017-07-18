@@ -69,10 +69,48 @@ If your `tsconfig.json` is set up to use commonjs modules, e.g., `"module": "com
 
 ```javascript
 import SimpleSubject = require('simple-subject')
+
+const subject:SimpleSubject = new SimpleSubject()
 ```
 
 However this doesn't work when using ES2015 modules, e.g., `"module": "es2015"`. In this case, use the TypeScript source:
 
 ```javascript
-import { SimpleSubject } from 'simple-subject/src'
+import { SimpleSubject } from 'simple-subject/src
+
+const subject:SimpleSubject = new SimpleSubject()
+
+```
+
+`SimpleSubject` supports generic notation for specifying the type of the data payload.
+
+```javascript
+import {
+  SimpleSubject,
+  ISubscriptionToken,
+  TNotifyCallback
+} from 'simple-subject/src'
+
+interface IMessage {
+  from: string
+  with: string
+}
+
+const doubleOh: SimpleSubject<IMessage> = new SimpleSubject()
+
+const mi6:ISubscriptionToken = doubleOh.subscribe((payload, id) => {
+  console.log(payload)
+})
+
+const message:IMessage = { from: 'Russia', with: 'Love' }
+
+doubleOh.notify(message)
+
+mi6.unsubscribe()
+```
+
+Output:
+
+```
+{ from: "Russia", with: "Love" }
 ```
