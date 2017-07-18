@@ -11,6 +11,8 @@
   "devDependencies": {
     "@types/mocha": "^2.2.41",
     "@types/node": "^8.0.13",
+    "codecov": "^2.2.0",
+    "istanbul": "^0.4.5",
     "mocha": "^3.4.2",
     "tslint": "^5.5.0",
     "typescript": "^2.4.1"
