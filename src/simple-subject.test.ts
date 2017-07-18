@@ -3,7 +3,7 @@ import { ISubscriptionToken } from './subscription-token'
 import assert = require('assert')
 
 describe('SimpleSubject', function () {
-  let so: SimpleSubject
+  let so: SimpleSubject<null>
 
   beforeEach(function () {
     so = new SimpleSubject()

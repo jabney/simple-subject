@@ -9,7 +9,7 @@ import {TNotifyCallback} from './notify-callback'
  * @export
  * @class SimpleSubject
  */
-export class SimpleSubject {
+export class SimpleSubject<T> {
   private _observers: IObservers
   private _nextId: number
 
@@ -38,7 +38,7 @@ export class SimpleSubject {
    * @returns {this}
    * @memberof SimpleSubject
    */
-  public notify(payload: any = null): this {
+  public notify(payload: T): this {
     for (const id in this._observers) {
       const callback = this._observers[id]
       callback(payload, +id)
@@ -53,10 +53,10 @@ export class SimpleSubject {
    * @returns {this}
    * @memberof SimpleSubject
    */
-  public notifyAsync(payload: any = null): this {
+  public notifyAsync(payload: T): this {
     for (const id in this._observers) {
       const callback = this._observers[id]
-      setTimeout(executeCallbackFn(callback, payload, +id), 0)
+      setTimeout(executeCallbackFn<T>(callback, payload, +id), 0)
     }
     return this
   }
@@ -70,9 +70,9 @@ export class SimpleSubject {
  * @param {number} id
  * @returns {() => void}
  */
-function executeCallbackFn(
+function executeCallbackFn<T>(
     callback: TNotifyCallback,
-    payload: any,
+    payload: T,
     id: number): () => void {
   return function () {
     callback(payload, id)
