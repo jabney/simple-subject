@@ -76,7 +76,7 @@ const subject:SimpleSubject = new SimpleSubject()
 However this doesn't work when using ES2015 modules, e.g., `"module": "es2015"`. In this case, use the TypeScript source:
 
 ```javascript
-import { SimpleSubject } from 'simple-subject/src
+import { SimpleSubject } from 'simple-subject/src'
 
 const subject:SimpleSubject = new SimpleSubject()
 
