@@ -1,7 +1,7 @@
 # SimpleSubject
 ## Subscribe, notify, unsubscribe
 
-[![Build Status](https://travis-ci.org/jabney/simple-subject.svg?branch=master)](https://travis-ci.org/jabney/simple-subject)
+[![Build Status](https://travis-ci.org/jabney/simple-subject.svg?branch=master)](https://travis-ci.org/jabney/simple-subject)[![codecov](https://codecov.io/gh/jabney/simple-subject/branch/master/graph/badge.svg)](https://codecov.io/gh/jabney/simple-subject)
 
 A simple, no-frills subject-observer implementation written in TypeScript.
 
