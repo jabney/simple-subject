@@ -19,7 +19,8 @@ describe('SimpleSubject', function () {
     const ids: number[] = []
 
     for (let i = 0; i < 3; i++) {
-      const sub: ISubscriptionToken = so.subscribe((data, id) => {
+      const sub: ISubscriptionToken = so.subscribe((payload, id) => {
+        assert.equal(payload, null, 'payload is null')
         ids.push(id)
       })
     }
