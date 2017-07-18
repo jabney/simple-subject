@@ -10,7 +10,10 @@ describe('SimpleSubject', function () {
   })
 
   it('can be subscribed to', function () {
-    const sub: ISubscriptionToken = so.subscribe((data, id) => {})
+    const sub: ISubscriptionToken = so.subscribe((data, id) => {
+      throw new Error()
+    })
+    assert.throws(() => so.notify(null))
     assert.equal(typeof sub.id, 'number', 'has a valid id')
     assert.equal(typeof sub.unsubscribe, 'function', 'has an unsubscribe method')
   })

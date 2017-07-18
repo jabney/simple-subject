@@ -29,8 +29,9 @@ describe('subscriptionToken', function () {
   it('removes observers', function () {
     Object.keys(observers).map((id) => {
       return subscriptionToken(observers, +id)
-    }).forEach(function (token) {
+    }).forEach(function (token, index) {
       assert.equal(typeof observers[token.id], 'function', 'observer is defined')
+      assert.equal(observers[token.id](null, index), null, 'function returns null')
       token.unsubscribe()
       assert.equal(typeof observers[token.id], 'undefined', 'observer is undefined')
     })
