@@ -11,9 +11,9 @@
   "devDependencies": {
     "@types/mocha": "^2.2.41",
     "@types/node": "^8.0.13",
-    "codecov": "^2.2.0",
+    "codecov": "^3.3.0",
     "istanbul": "^0.4.5",
-    "mocha": "^3.4.2",
+    "mocha": "^6.1.4",
     "tslint": "^5.5.0",
     "typescript": "^2.4.1"
   },
@@ -21,7 +21,9 @@
     "build": "npm run build-source && npm run build-index",
     "build-index": "tsc --declaration index.ts",
     "build-source": "rm -rf lib/*.* && tsc",
-    "test": "npm run build && istanbul cover node_modules/mocha/bin/_mocha lib/*.test.js && codecov"
+    "codecov": "codecov",
+    "cover": "npm run build && istanbul cover node_modules/mocha/bin/_mocha lib/*.test.js",
+    "test": "npm run build && mocha lib/*.test.js"
   },
   "repository": {
     "type": "git",
